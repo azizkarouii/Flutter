@@ -1,17 +1,17 @@
-# Documentation E-Commerce App - Atelier 04
+# Documentation E-Commerce
 
 ## Vue d'ensemble
 Application Flutter e-commerce avec page d'accueil suivant la maquette. Affichage centré des catégories et marques populaires.
 
 ## Structure des fichiers
-```
+
 lib/projet_e_commerce/
 ├── const/images.dart           # Images et noms des catégories/marques
 ├── pages/home_page.dart        # Page d'accueil principale  
 └── myWidgets/
-    ├── categories_grid.dart    # Grille des catégories
-    └── brands_grid.dart        # Grille des marques
-```
+    ├── categories_grid.dart    # Grille des catégories  #ajoutée 
+    └── brands_grid.dart        # Grille des marques #ajoutée
+
 
 ## Widgets principaux utilisés
 
