@@ -11,7 +11,7 @@ class BrandsGrid extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Titre de la section
+          // Titre 
           const Padding(
             padding: EdgeInsets.only(bottom: 15),
             child: Text(
@@ -23,7 +23,7 @@ class BrandsGrid extends StatelessWidget {
               ),
             ),
           ),
-          // Grille centrée des marques
+          // Grille 
           Center(
             child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.9,
@@ -36,12 +36,11 @@ class BrandsGrid extends StatelessWidget {
                   mainAxisSpacing: 15,
                   childAspectRatio: 1,
                 ),
-                itemCount: brandsImages.take(6).length, // Affiche 6 marques max
+                itemCount: brandsImages.take(6).length, 
                 itemBuilder: (context, index) {
                   final brand = brandsImages[index];
                   return GestureDetector(
                     onTap: () {
-                      // Ici vous pouvez naviguer vers la page de la marque
                       print('Marque sélectionnée: ${brand['name']}');
                     },
                     child: Container(
@@ -49,7 +48,7 @@ class BrandsGrid extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.grey.withOpacity(0.3),
+                            color: Colors.grey,
                             spreadRadius: 1,
                             blurRadius: 5,
                             offset: const Offset(0, 2),
@@ -61,9 +60,7 @@ class BrandsGrid extends StatelessWidget {
                         child: Stack(
                           fit: StackFit.expand,
                           children: [
-                            // Image de la marque
                             Image.asset(brand['image']!, fit: BoxFit.cover),
-                            // Overlay léger pour améliorer la lisibilité
                             Container(
                               decoration: BoxDecoration(
                                 gradient: LinearGradient(
@@ -71,7 +68,7 @@ class BrandsGrid extends StatelessWidget {
                                   end: Alignment.bottomCenter,
                                   colors: [
                                     Colors.transparent,
-                                    Colors.black.withOpacity(0.4),
+                                    Colors.black,
                                   ],
                                 ),
                               ),

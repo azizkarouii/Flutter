@@ -11,7 +11,7 @@ class CategoriesGrid extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Titre de la section
+          // Titre 
           const Padding(
             padding: EdgeInsets.only(bottom: 15),
             child: Text(
@@ -23,7 +23,7 @@ class CategoriesGrid extends StatelessWidget {
               ),
             ),
           ),
-          // Grille centrée des catégories
+          // Grille 
           Center(
             child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.9,
@@ -38,12 +38,11 @@ class CategoriesGrid extends StatelessWidget {
                 ),
                 itemCount: categoriesImages
                     .take(6)
-                    .length, // Affiche 6 catégories max
+                    .length, 
                 itemBuilder: (context, index) {
                   final category = categoriesImages[index];
                   return GestureDetector(
                     onTap: () {
-                      // Ici vous pouvez naviguer vers la page de la catégorie
                       print('Catégorie sélectionnée: ${category['name']}');
                     },
                     child: Container(
@@ -63,9 +62,7 @@ class CategoriesGrid extends StatelessWidget {
                         child: Stack(
                           fit: StackFit.expand,
                           children: [
-                            // Image de la catégorie
                             Image.asset(category['image']!, fit: BoxFit.cover),
-                            // Overlay avec le nom de la catégorie
                             Container(
                               decoration: BoxDecoration(
                                 gradient: LinearGradient(
@@ -78,7 +75,6 @@ class CategoriesGrid extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            // Texte du nom de la catégorie
                             Positioned(
                               bottom: 8,
                               left: 8,

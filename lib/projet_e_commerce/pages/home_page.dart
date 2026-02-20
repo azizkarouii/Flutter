@@ -30,14 +30,7 @@ class _MyWidgetState extends State<HomePage> {
         ),
         centerTitle: false,
         backgroundColor: Colors.blue,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.shopping_cart, color: Colors.white),
-            onPressed: () {
-              // Action pour le panier
-            },
-          ),
-        ],
+        actions: [],
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -45,23 +38,17 @@ class _MyWidgetState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Carousel d'images - bannière centrale
               const SizedBox(height: 20),
               const ImageCarousel(),
 
-              // Espacement entre les sections
               const SizedBox(height: 30),
 
-              // Section Catégories
               const CategoriesGrid(),
 
-              // Espacement entre les sections
               const SizedBox(height: 20),
 
-              // Section Marques Populaires
               const BrandsGrid(),
 
-              // Espacement final
               const SizedBox(height: 30),
             ],
           ),
